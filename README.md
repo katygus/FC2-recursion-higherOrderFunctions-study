@@ -79,11 +79,6 @@ function fibonacci(n) {
 - Some problems are naturally recursive (tree traversal, etc.)
 - Watch for stack overflow with deep recursion
 
-## Practice Problems
-1. Write a higher-order function that applies a callback to each element of an array and returns a new array
-2. Create a recursive function to calculate the sum of all numbers from 1 to n
-3. Implement a `filter` function using recursion
-4. Write a function that takes a callback and a value, and applies the callback multiple times (e.g., `applyN(f, n, x)` = f(f(...f(x))) n times)
 
 ## Common Pitfalls
 - Forgetting the base case in recursion (infinite recursion)
