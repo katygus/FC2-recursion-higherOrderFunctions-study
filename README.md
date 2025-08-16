@@ -79,7 +79,11 @@ function fibonacci(n) {
 - Some problems are naturally recursive (tree traversal, etc.)
 - Watch for stack overflow with deep recursion
 
-
+## Common Pitfalls
+- Forgetting the base case in recursion (infinite recursion)
+- Not returning from recursive calls
+- Callback hell/pyramid of doom (nested callbacks)
+- Assuming callbacks execute immediately (they often don't in async code)
 
 ## Tail Call Optimization (TCO)
 
@@ -116,10 +120,6 @@ function factorial(n, accumulator = 1) {
 1. The recursive call must be in tail position
 2. No operations can occur after the recursive call
 3. The recursive call must return its value directly
-
-### Browser Support
-- Proper TCO is part of ES6 but only implemented in Safari
-- Other browsers may not optimize (but the pattern is still good practice)
 
 ## Higher Order Functions Reference Sheet
 
@@ -263,11 +263,7 @@ const evens = numbers.filter(num => num % 2 === 0);
 | `every()` | Checking if all elements match    | Boolean            |
 
 
-## Common Pitfalls
-- Forgetting the base case in recursion (infinite recursion)
-- Not returning from recursive calls
-- Callback hell/pyramid of doom (nested callbacks)
-- Assuming callbacks execute immediately (they often don't in async code)
+
 
 
 
