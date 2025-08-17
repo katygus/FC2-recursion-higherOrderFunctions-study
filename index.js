@@ -4,19 +4,36 @@
 // Problem 1
 // Write a function `capitalizeWords` that takes an array of strings and 
 // returns a new array with each word capitalized. Use `map()`.
+function capitalizeWords(arr) {
+   return arr.map(el => el + 's');
+}
 
-
-
-
-
+const pluralArr = ['dog', 'elbow', 'top', 'cheese'];
+// console.log(capitalizeWords(pluralArr));
 
 // Problem 2
 // Create a function `countVowels` that uses recursion to count how 
 // many vowels are in a string.
+//base - length of string is 0
+//recursive - convert all els to lower case, check if vowel, incr vowel counter if so, slice el from string
+   
+function countVowels(string, acc = 0) {
+    if (string.length === 0) return acc;
+    if (string.toLowerCase()[0] === 'a' || string.toLowerCase()[0] === 'e' || string.toLowerCase()[0] === 'i' || string.toLowerCase()[0] === 'o' || string.toLowerCase()[0] === 'u') {
+        acc++;
+    }
+    return countVowels(string.slice(1), acc);
+  
+    // if (vowelStr.includes(string[0])) acc++;
+    // return countVowels(string.slice(1));
+    
+    
+    //return string.toLowerCase.includes(vowelsArr[0])  countVowels(string.slice(1));
+    
+}
 
-
-
-// Problem 3
+console.log(countVowels('OraNgE'));
+// Problem 3 - ***** EXTRA CHALLENGING-SAVE TO END
 // Implement a function `delayedGreeting` that takes a name and a callback 
 // function, then executes the callback after a 1-second delay with the greeting 
 // "Hello, [name]!".
